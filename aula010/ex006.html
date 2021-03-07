@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventos DOM</title>
+<style> div#area{background-color: green;
+color: white; 
+width: 200px; 
+height: 200px;
+font: normal 20pt arial;
+line-height: 200px;
+text-align: center;} 
+
+
+
+
+
+</style>
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<body>
+    <div id="area" onmouseout="sair()" onmouseover="mudar()" >
+        interaja...
+
+        
+    </div>
+
+<script>
+var click = document.querySelector('div#area')
+click.addEventListener('click',clicar)
+click.addEventListener('mouseenter',entrar)
+click.addEventListener('onmouseout',sair)
+click.addEventListener('onmouseover',mudar)
+
+function clicar(){
+    click.innerText = 'clicou'
+    click.style.background = 'red'
+}
+function entrar(){
+    click.innerText = 'entrou'
+}
+function sair(){
+    click.innerText ='saiu'
+    click.style.background = 'green'
+}
+function mudar(){
+    click.style.background = 'blue'
+}
+
+    
+</script>
+
+</body>
+</html>
