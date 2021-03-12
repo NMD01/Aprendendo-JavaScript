@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas de multas</title>
+</head>
+<body>
+    <h1 id="titulo">Sistema de  multas</h1>
+    <div id="pergunta"></div>
+    Velocidade do carro <input type="number" name="vel" id="vel">km/h
+    <input type="button" value="confirmar" onclick="confirmar()">
+    <div id="resultado"></div>
+
+</body><script> function confirmar(){
+    var vel1 = document.querySelector('input#vel')
+    var resultado1 = document.querySelector('div#resultado')
+    var vel2 =Number(vel1.value)
+    resultado1.innerHTML=`<p>A sua Velocidade atual e de ${vel2}km/h.</p>`
+
+    if (vel2 > 60){
+        resultado1.innerHTML+=`<p>MULTADO!<p/>`
+    }else{
+        resultado1.innerHTML+=`<p>NÃO FOI MULTADO<p/>`
+    }
+
+
+
+
+
+}
+
+
+
+</script>
+
+
+
+</html>
